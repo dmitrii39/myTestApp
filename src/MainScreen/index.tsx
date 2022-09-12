@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Basket from '../assets/SVG/Basket.svg';
 import {
   SafeAreaView,
   ScrollView,
@@ -21,21 +22,27 @@ const MainScreen = () => {
         </TouchableOpacity>
         <View style={styles.berderLineStyle} />
         <View style={styles.itemStyle}>
-          <CheckBox
-            lineWidth={1}
-            animationDuration={0.5}
-            onCheckColor={'#fff'}
-            onFillColor={'#19C149'}
-            tintColors={{true: '#000'}}
-            onTintColor={'#19C149'}
-            disabled={false}
-            onAnimationType={'bounce'}
-            offAnimationType={'bounce'}
-            boxType={'square'}
-            value={isSelected}
-            onValueChange={setSelection}
-            style={styles.checkbox}
-          />
+          <View style={styles.checkBoxWrapper}>
+            <CheckBox
+              lineWidth={1}
+              animationDuration={0.5}
+              onCheckColor={'#fff'}
+              onFillColor={'#19C149'}
+              tintColors={{true: '#000'}}
+              onTintColor={'#19C149'}
+              disabled={false}
+              onAnimationType={'bounce'}
+              offAnimationType={'bounce'}
+              boxType={'square'}
+              value={isSelected}
+              onValueChange={setSelection}
+            />
+          </View>
+          <View style={styles.subjectWrapper}>
+            <Text style={styles.title}>Матем</Text>
+            <Text style={styles.text}>Стр 4, упр. 24</Text>
+          </View>
+          <Basket />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -43,7 +50,19 @@ const MainScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  checkbox: {
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  text: {
+    fontSize: 16,
+  },
+  subjectWrapper: {
+    width: 150,
+    marginLeft: 20,
+    alignSelf: 'center',
+  },
+  checkBoxWrapper: {
     width: 30,
     heigth: 30,
     alignSelf: 'center',
