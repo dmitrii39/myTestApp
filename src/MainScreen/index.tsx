@@ -43,11 +43,11 @@ const MainScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    checkbox: {
-      width: 30,
-      heigth: 30,
-      alignSelf: "center",
-    },
+  checkbox: {
+    width: 30,
+    heigth: 30,
+    alignSelf: 'center',
+  },
   itemStyle: {
     width: '90%',
     flexDirection: 'row',
