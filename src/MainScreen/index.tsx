@@ -22,7 +22,7 @@ const MainScreen = () => {
         <View style={styles.berderLineStyle} />
         <View style={styles.itemStyle}>
           <CheckBox
-            lineWidth={2}
+            lineWidth={1}
             animationDuration={0.5}
             onCheckColor={'#fff'}
             onFillColor={'#19C149'}
