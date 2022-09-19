@@ -1,12 +1,16 @@
 import React from 'react';
 import MainScreen from './src/MainScreen';
 import {SafeAreaView} from 'react-native';
-
+import {store} from './src/reducers/store';
+import {Provider} from 'react-redux';
 const App = () => {
   return (
-    <SafeAreaView>
+    <Provider store={store}>
+<SafeAreaView>
       <MainScreen />
     </SafeAreaView>
+    </Provider>
+    
   );
 };
 
